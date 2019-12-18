@@ -1,14 +1,15 @@
 {
   "name": "arsam-io",
   "version": "1.0.0",
-  "description": "",
+  "description": "Arsam Sarabi - Full-Stack Engineer",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
+  "author": "Arsam Sarabi <arsamsarabi@me.com>",
   "license": "ISC",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
     "next": "^9.1.6",
     "react": "^16.12.0",
