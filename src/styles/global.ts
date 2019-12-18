@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import { resetCss } from "./reset";
+import { createGlobalStyle } from 'styled-components'
+import { resetCss } from './reset'
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -24,6 +24,6 @@ export const GlobalStyles = createGlobalStyle`
     overflow: hidden;
     color: #333333;
   }
-`;
+`
 
-export default GlobalStyles;
+export default GlobalStyles

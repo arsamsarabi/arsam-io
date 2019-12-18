@@ -1,4 +1,4 @@
-import { css } from "styled-components";
+import { css } from 'styled-components'
 
 export const resetCss = css`
   html,
@@ -85,8 +85,8 @@ export const resetCss = css`
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
+    font-size: 100%;
     vertical-align: baseline;
   }
   /* HTML5 display-role reset for older browsers */
@@ -118,7 +118,7 @@ export const resetCss = css`
   blockquote:after,
   q:before,
   q:after {
-    content: "";
+    content: '';
     content: none;
   }
   table {
@@ -145,4 +145,4 @@ export const resetCss = css`
     max-width: 100%;
     height: auto;
   }
-`;
+`

@@ -1,5 +1,6 @@
-import Link from "next/link";
-import styled from "styled-components";
+import React, { ReactElement } from 'react'
+import Link from 'next/link'
+import styled from 'styled-components'
 
 const StyledHeader = styled.header`
   box-sizing: border-box;
@@ -18,9 +19,9 @@ const StyledHeader = styled.header`
       margin-left: 16px;
     }
   }
-`;
+`
 
-const Header = () => (
+const Header = (): ReactElement => (
   <StyledHeader>
     <Link href="/">
       <a>Home</a>
@@ -29,6 +30,6 @@ const Header = () => (
       <a>About</a>
     </Link>
   </StyledHeader>
-);
+)
 
-export default Header;
+export default Header

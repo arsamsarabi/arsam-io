@@ -9,7 +9,13 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "lint": "eslint \"src/**\" --quiet --fix",
+    "lint:style": "stylelint \"src/**\"",
+    "tidy": "npm run lint && npm run prettier && npm run lint:style",
+    "prettier": "prettier 'src/**/*.{ts,tsx}' --write",
+    "cosmos": "cosmos",
+    "cosmos:build": "cosmos-export"
   },
   "dependencies": {
     "isomorphic-unfetch": "^3.0.0",
@@ -19,9 +25,16 @@
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
+    "@alineaos/eslint-config-alinea": "^1.0.3",
+    "@alineaos/prettier-config-alinea": "^1.1.0",
+    "@alineaos/stylelint-config-alinea": "^1.0.2",
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "babel-plugin-styled-components": "^1.10.6",
+    "eslint": "^6.7.2",
+    "prettier": "^1.19.1",
+    "react-cosmos": "^5.0.0",
+    "stylelint": "^12.0.0",
     "typescript": "^3.7.3"
   }
 }
