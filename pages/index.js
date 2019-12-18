@@ -9,7 +9,7 @@ const App = props => {
       <ul>
         {props.shows.map(show => (
           <li key={show.id}>
-            <Link href="/post/[id]" as={`/post/${show.id}`}>
+            <Link href="/show/[id]" as={`/show/${show.id}`}>
               <a>{show.name}</a>
             </Link>
           </li>
