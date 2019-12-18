@@ -1,4 +1,4 @@
 module.exports = {
   extends: '@alineaos/stylelint-config-alinea',
-  ignoreFiles: ['src/components/**/*.md'],
+  ignoreFiles: ['src/**/*.md', 'src/**/*.jpg'],
 }

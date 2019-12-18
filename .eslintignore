@@ -4,3 +4,4 @@ stylelint.config.js
 prettier.config.js
 next.config.js
 *.md
+*.jpg

@@ -1,33 +1,47 @@
+import matter from 'gray-matter'
 import React, { ReactElement } from 'react'
-import Link from 'next/link'
-import fetch from 'isomorphic-unfetch'
 import Layout from '../components/layout'
 
 const App = (props): ReactElement => {
+  console.log(props)
   return (
     <Layout>
-      <h1>Batman TV Shows</h1>
-      <ul>
-        {props.shows.map(show => (
-          <li key={show.id}>
-            <Link href="/show/[id]" as={`/show/${show.id}`}>
-              <a>{show.name}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <h1>Arsam</h1>
     </Layout>
   )
 }
 
-App.getInitialProps = async (): Promise<{ shows: any[] }> => {
-  const res = await fetch('https://api.tvmaze.com/search/shows?q=batman')
-  const data = await res.json()
-
-  console.log(`Show data fetched. Count: ${data.length}`)
+App.getInitialProps = (): any => {
+  // get all .md files from the src/posts dir
+  const posts = ((context): any => {
+    // grab all the files matching this context
+    const keys = context.keys()
+    // grab the values from these files
+    const values = keys.map(context)
+    // go through each file
+    const data = keys.map((key, index) => {
+      // Create slug from filename
+      const slug = key
+        .replace(/^.*[\\\/]/, '')
+        .split('.')
+        .slice(0, -1)
+        .join('.')
+      // get the current file value
+      const value: any = values[index]
+      // Parse frontmatter & markdownbody for the current file
+      const document = matter(value.default)
+      // return the .md content & pretty slug
+      return {
+        document,
+        slug,
+      }
+    })
+    // return all the posts
+    return data
+  })(require.context('../posts', true, /\.md$/))
 
   return {
-    shows: data.map(entry => entry.show),
+    allBlogs: posts,
   }
 }
 

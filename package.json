@@ -4,12 +4,18 @@
   "description": "Arsam Sarabi - Full-Stack Engineer",
   "main": "index.js",
   "author": "Arsam Sarabi <arsamsarabi@me.com>",
-  "license": "ISC",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:arsamsarabi/arsam-io.git"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
     "export": "next export",
+    "deploy": "npm run build && npm run export",
     "lint": "eslint \"src/**\" --quiet --fix",
     "lint:style": "stylelint \"src/**\"",
     "tidy": "npm run lint && npm run prettier && npm run lint:style",
@@ -21,10 +27,10 @@
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
   },
   "dependencies": {
-    "isomorphic-unfetch": "^3.0.0",
     "next": "^9.1.6",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-markdown": "^4.2.2",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
@@ -34,12 +40,16 @@
     "@next/bundle-analyzer": "^9.1.6",
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
+    "@types/webpack-env": "^1.14.1",
     "babel-plugin-styled-components": "^1.10.6",
     "cross-env": "^6.0.3",
     "eslint": "^6.7.2",
+    "gray-matter": "^4.0.2",
     "prettier": "^1.19.1",
+    "raw-loader": "^4.0.0",
     "react-cosmos": "^5.0.0",
     "stylelint": "^12.0.0",
-    "typescript": "^3.7.3"
+    "typescript": "^3.7.3",
+    "webpack": "^4.41.3"
   }
 }
