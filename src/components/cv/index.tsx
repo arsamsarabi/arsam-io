@@ -1,20 +1,20 @@
 import React, { ReactElement } from 'react'
-import { StyledCv } from './cv.styles'
+import styled from 'styled-components'
+import { CvSection } from './components/cvSection'
+import { arsamsCV } from './components/data'
+
+const StyledCv = styled.section`
+  width: 270px;
+  margin: 50px auto;
+  position: Relative;
+`
 
 export const Cv = (): ReactElement => {
   return (
     <StyledCv>
-      <p>Arsam</p>
-      <p>About</p>
-      <p>Employment</p>
-      <p>History</p>
-      <p>Education</p>
-      <p>Technical</p>
-      <p>Skills</p>
-      <p>My Personal</p>
-      <p>Blog</p>
-      <p>Get in</p>
-      <p>Touch</p>
+      {arsamsCV.map(({ id, texts, color, hoverColor }: CvSection) => {
+        return <CvSection key={id} texts={texts} color={color} hoverColor={hoverColor} />
+      })}
     </StyledCv>
   )
 }

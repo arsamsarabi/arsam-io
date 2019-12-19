@@ -22,7 +22,6 @@ const App = (): ReactElement => {
   return (
     <Layout>
       <StyledApp>
-        {/* <h1>Hello, I'm Arsam. A Full-Stack Javascript Engineer based in Oxford, England</h1> */}
         <Cv />
       </StyledApp>
     </Layout>

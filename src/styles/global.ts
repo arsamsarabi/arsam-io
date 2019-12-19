@@ -5,7 +5,43 @@ export const GlobalStyles = createGlobalStyle`
 
   ${resetCss}
 
-  @import url('https://fonts.googleapis.com/css?family=B612:400,700|BenchNine:700&display=swap');
+  /* benchnine-regular - latin */
+  @font-face {
+    font-family: 'BenchNine';
+    font-style: normal;
+    font-weight: 400;
+    src: local('BenchNine Regular'), local('BenchNine-Regular'),
+       url('/static/fonts/benchnine-v8-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/static/fonts/benchnine-v8-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+/* benchnine-700 - latin */
+  @font-face {
+    font-family: 'BenchNine';
+    font-style: normal;
+    font-weight: 700;
+    src: local('BenchNine Bold'), local('BenchNine-Bold'),
+        url('/static/fonts/benchnine-v8-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('/static/fonts/benchnine-v8-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+  /* b612-regular - latin */
+  @font-face {
+    font-family: 'B612';
+    font-style: normal;
+    font-weight: 400;
+    src: local('B612 Regular'), local('B612-Regular'),
+       url('/static/fonts/b612-v4-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/static/fonts/b612-v4-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+/* b612-700 - latin */
+  @font-face {
+    font-family: 'B612';
+    font-style: normal;
+    font-weight: 700;
+    src: local('B612 Bold'), local('B612-Bold'),
+       url('/static/fonts/b612-v4-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/static/fonts/b612-v4-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
 
   @font-face {
     font-family: 'beauty';
