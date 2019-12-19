@@ -32,3 +32,21 @@ declare type Theme = {
   colors: Colors
   cv: CV
 }
+
+declare type CvText = {
+  text: string
+  size: number
+}
+
+declare type CvSection = {
+  id?: text
+  texts: CvText[]
+  color: string
+  hoverColor: string
+}
+
+declare type CvHeading = {
+  size: number
+  color: string
+  hoverColor: string
+}
