@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../../styles/theme'
 import { GlobalStyles } from '../../styles/global'
-import Header from '../header'
+import Footer from '../footer'
 import { StyledLayout, Content } from './layout.styles'
 
 export const Layout = ({ children }): ReactElement => {
@@ -11,8 +11,8 @@ export const Layout = ({ children }): ReactElement => {
       <GlobalStyles />
       <ThemeProvider theme={theme}>
         <StyledLayout>
-          <Header />
           <Content>{children}</Content>
+          <Footer />
         </StyledLayout>
       </ThemeProvider>
     </>
