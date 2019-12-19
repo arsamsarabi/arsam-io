@@ -4,7 +4,7 @@
 */
 import React, { ReactElement } from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
-// Import styled components ServerStyleSheet
+import { GlobalStyles } from '../styles/global'
 import { ServerStyleSheet } from 'styled-components'
 
 class AioDocument extends Document<{ styleTags: any }> {
@@ -16,6 +16,7 @@ class AioDocument extends Document<{ styleTags: any }> {
           {this.props.styleTags}
         </Head>
         <body>
+          <GlobalStyles />
           <Main />
           <NextScript />
         </body>

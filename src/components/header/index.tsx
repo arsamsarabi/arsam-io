@@ -1,33 +1,46 @@
 import React, { ReactElement } from 'react'
 import Link from 'next/link'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-const StyledHeader = styled.header`
-  box-sizing: border-box;
-  width: 100vw;
-  height: 48px;
-  background-color: whitesmoke;
-  display: flex;
-  justify-items: flex-start;
-  align-items: center;
-  padding: 0 16px;
-  & > a {
-    text-decoration: none;
-    color: royalblue;
-    font-weight: 700;
-    &:not(:first-of-type) {
-      margin-left: 16px;
+const StyledHeader = styled.header(({ theme }: { theme: Theme }) => {
+  return css`
+    box-sizing: border-box;
+    width: 100vw;
+    height: 48px;
+    display: flex;
+    justify-items: flex-end;
+    align-items: center;
+    padding: 0 32px;
+
+    & > a {
+      text-decoration: none;
+      color: royalblue;
+      color: ${theme.palette.contrast};
+      &:first-of-type {
+        margin-right: auto;
+        font-family: var(--font-headings);
+        font-size: 18px;
+      }
+      &:not(:first-of-type) {
+        margin-left: 16px;
+      }
     }
-  }
-`
+  `
+})
 
-const Header = (): ReactElement => (
+export const Header = (): ReactElement => (
   <StyledHeader>
     <Link href="/">
-      <a>Home</a>
+      <a>Arsam</a>
     </Link>
-    <Link href="/about">
+    <Link href="/about/">
       <a>About</a>
+    </Link>
+    <Link href="/work/">
+      <a>Work</a>
+    </Link>
+    <Link href="/blog/">
+      <a>Blog</a>
     </Link>
   </StyledHeader>
 )

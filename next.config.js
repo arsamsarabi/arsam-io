@@ -1,8 +1,7 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
+const withFonts = require('next-fonts')
 
-module.exports = withBundleAnalyzer({
+module.exports = withFonts({
+  enableSvg: true,
   exportTrailingSlash: true,
   exportPathMap: async function() {
     const paths = {

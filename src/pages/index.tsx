@@ -1,48 +1,31 @@
-import matter from 'gray-matter'
 import React, { ReactElement } from 'react'
-import Layout from '../components/layout'
+import styled, { css } from 'styled-components'
+import { Layout } from '../components'
 
-const App = (props): ReactElement => {
-  console.log(props)
+const StyledApp = styled.main(({ theme }: { theme: Theme }) => {
+  return css`
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-family: var(--font-headings);
+      font-size: 32px;
+      line-height: 1.8;
+      color: ${theme.palette.accent};
+      max-width: 920px;
+    }
+  `
+})
+
+const App = (): ReactElement => {
   return (
     <Layout>
-      <h1>Arsam</h1>
+      <StyledApp>
+        <h1>Hi I'm Arsam. A Full-Stack Javascript Engineer based in Oxford, England</h1>
+      </StyledApp>
     </Layout>
   )
-}
-
-App.getInitialProps = (): any => {
-  // get all .md files from the src/posts dir
-  const posts = ((context): any => {
-    // grab all the files matching this context
-    const keys = context.keys()
-    // grab the values from these files
-    const values = keys.map(context)
-    // go through each file
-    const data = keys.map((key, index) => {
-      // Create slug from filename
-      const slug = key
-        .replace(/^.*[\\\/]/, '')
-        .split('.')
-        .slice(0, -1)
-        .join('.')
-      // get the current file value
-      const value: any = values[index]
-      // Parse frontmatter & markdownbody for the current file
-      const document = matter(value.default)
-      // return the .md content & pretty slug
-      return {
-        document,
-        slug,
-      }
-    })
-    // return all the posts
-    return data
-  })(require.context('../posts', true, /\.md$/))
-
-  return {
-    allBlogs: posts,
-  }
 }
 
 export default App

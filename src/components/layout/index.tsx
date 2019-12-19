@@ -1,17 +1,15 @@
 import React, { ReactElement } from 'react'
+import { ThemeProvider } from 'styled-components'
+import { theme } from '../../styles/theme'
 import Header from '../header'
-import styled, { ThemeProvider } from 'styled-components'
-import { GlobalStyles } from '../../styles/global'
+import { StyledLayout, Content } from './layout.styles'
 
-const StyledLayout = styled.div``
-
-const Layout = ({ children }): ReactElement => {
+export const Layout = ({ children }): ReactElement => {
   return (
-    <ThemeProvider theme={{}}>
-      <GlobalStyles />
+    <ThemeProvider theme={theme}>
       <StyledLayout>
         <Header />
-        {children}
+        <Content>{children}</Content>
       </StyledLayout>
     </ThemeProvider>
   )

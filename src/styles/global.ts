@@ -5,7 +5,12 @@ export const GlobalStyles = createGlobalStyle`
 
   ${resetCss}
 
-  @import url('https://fonts.googleapis.com/css?family=Courier+Prime|Raleway:400,700&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=B612:400,700|Press+Start+2P&display=swap');
+
+  @font-face {
+    font-family: 'oasis';
+    src: url('/static/fonts/theblueoasis.woff');
+  }
 
   #app {
     height: 100vh;
@@ -18,11 +23,20 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'B612', sans-serif;
     font-weight: 400;
     font-size: 18px;
     overflow: hidden;
     color: #333333;
+  }
+
+  #__next {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  :root {
+    --font-headings: 'Press Start 2P'
   }
 `
 
