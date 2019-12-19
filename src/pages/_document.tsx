@@ -4,19 +4,14 @@
 */
 import React, { ReactElement } from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
-import { GlobalStyles } from '../styles/global'
 import { ServerStyleSheet } from 'styled-components'
 
 class AioDocument extends Document<{ styleTags: any }> {
   render() {
     return (
       <html>
-        <Head>
-          {/* Step 5: Output the styles in the head  */}
-          {this.props.styleTags}
-        </Head>
+        <Head>{this.props.styleTags}</Head>
         <body>
-          <GlobalStyles />
           <Main />
           <NextScript />
         </body>
