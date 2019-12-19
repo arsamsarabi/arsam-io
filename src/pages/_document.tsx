@@ -10,7 +10,41 @@ class AioDocument extends Document<{ styleTags: any }> {
   render() {
     return (
       <html>
-        <Head>{this.props.styleTags}</Head>
+        <Head>
+          <link
+            rel="preload"
+            as="font"
+            type="font/woff2"
+            href="/static/fonts/b612-v4-latin-700.woff2"
+            crossOrigin="anonymous"
+          />
+
+          <link
+            rel="preload"
+            as="font"
+            type="font/woff2"
+            href="/static/fonts/b612-v4-latin-regular.woff2"
+            crossOrigin="anonymous"
+          />
+
+          <link
+            rel="preload"
+            as="font"
+            type="font/woff2"
+            href="/static/fonts/benchnine-v8-latin-700.woff2"
+            crossOrigin="anonymous"
+          />
+
+          <link
+            rel="preload"
+            as="font"
+            type="font/woff2"
+            href="/static/fonts/benchnine-v8-latin-regular.woff2"
+            crossOrigin="anonymous"
+          />
+
+          {this.props.styleTags}
+        </Head>
         <body>
           <Main />
           <NextScript />

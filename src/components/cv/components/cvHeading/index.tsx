@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export const CvHeading = styled.div<CvHeading>(({ size, color, hoverColor }) => {
+export const CvHeading = styled.p<CvHeading>(({ size, color, hoverColor }) => {
   return css`
     line-height: 0.8;
     text-transform: uppercase;
