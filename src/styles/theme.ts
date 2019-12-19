@@ -1,15 +1,15 @@
 const colors: Colors = {
-  mine: '#343434',
-  grey: '#8e8b82',
-  spanish: '#e9dcbe',
-  concrete: '#f3f3f3',
+  tuna: '#33313b',
+  steel: '#4592af',
+  cashmere: '#e3c4a8',
+  sand: '#f6f5f5',
 }
 
 const palette: Palette = {
-  primary: colors.mine,
-  secondary: colors.grey,
-  accent: colors.spanish,
-  contrast: colors.concrete,
+  primary: colors.tuna,
+  secondary: colors.steel,
+  accent: colors.cashmere,
+  contrast: colors.sand,
 }
 
 export const theme: Theme = {
