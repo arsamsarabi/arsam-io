@@ -11,10 +11,17 @@ module.exports = withFonts({
     return paths
   },
   webpack: function(config) {
-    config.module.rules.push({
-      test: /\.md$/,
-      use: 'raw-loader',
-    })
+    config.module.rules = [
+      ...config.module.rules,
+      {
+        test: /\.md$/,
+        use: 'raw-loader',
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
+    ]
     return config
   },
 })

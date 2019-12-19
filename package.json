@@ -20,8 +20,6 @@
     "lint:style": "stylelint \"src/**\"",
     "tidy": "npm run lint && npm run prettier && npm run lint:style",
     "prettier": "prettier 'src/**/*.{ts,tsx}' --write",
-    "cosmos": "cosmos",
-    "cosmos:build": "cosmos-export",
     "analyze": "cross-env ANALYZE=true next build",
     "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
@@ -40,6 +38,7 @@
     "@alineaos/prettier-config-alinea": "^1.1.0",
     "@alineaos/stylelint-config-alinea": "^1.0.2",
     "@next/bundle-analyzer": "^9.1.6",
+    "@svgr/webpack": "^4.3.3",
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/styled-components": "^4.4.1",
@@ -51,7 +50,6 @@
     "html-webpack-plugin": "^3.2.0",
     "prettier": "^1.19.1",
     "raw-loader": "^4.0.0",
-    "react-cosmos": "^5.0.0",
     "stylelint": "^12.0.0",
     "typescript": "^3.7.3",
     "webpack": "^4.41.3"

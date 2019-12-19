@@ -22,9 +22,9 @@ export const StyledLayout = styled.section(({ theme }: StyledLayoutProps) => {
       -45deg,
       ${lighten(0.05, theme.palette.primary)},
       ${lighten(0.025, theme.palette.primary)},
-      ${theme.palette.primary},
       ${darken(0.025, theme.palette.primary)},
-      ${darken(0.05, theme.palette.primary)}
+      ${darken(0.05, theme.palette.primary)},
+      ${darken(0.075, theme.palette.primary)}
     );
     background-size: 400% 400%;
     animation: ${backgroundAnimation} 10s ease infinite;

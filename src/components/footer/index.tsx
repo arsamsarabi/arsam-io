@@ -1,35 +1,23 @@
 import React, { ReactElement } from 'react'
 import Link from 'next/link'
-import styled, { css } from 'styled-components'
-
-const StyledFooter = styled.footer(({ theme }: { theme: Theme }) => {
-  return css`
-    box-sizing: border-box;
-    width: 100vw;
-    height: 48px;
-    display: flex;
-    justify-items: flex-end;
-    align-items: center;
-    padding: 0 24px 24px;
-
-    & > a {
-      text-decoration: none;
-      color: royalblue;
-      color: ${theme.palette.secondary};
-      &:first-of-type {
-        margin-right: auto;
-        font-family: 'beauty', sans-serif;
-        font-size: 28px;
-      }
-    }
-  `
-})
+import { StyledFooter, SocialLink } from './footer.styles'
+import { DevTo, Github, LinkedIn } from './icons'
 
 export const Footer = (): ReactElement => (
   <StyledFooter>
     <Link href="/">
       <a>Arsam Sarabi</a>
     </Link>
+
+    <SocialLink href="https://github.com/arsamsarabi" target="_blank">
+      <Github />
+    </SocialLink>
+    <SocialLink href="https://dev.to/arsamsarabi" target="_blank">
+      <DevTo />
+    </SocialLink>
+    <SocialLink href="https://www.linkedin.com/in/arsam/" target="_blank">
+      <LinkedIn />
+    </SocialLink>
   </StyledFooter>
 )
 

@@ -1,8 +1,3 @@
-import { lighten, darken } from 'polished'
-
-const CV_PRIMARY = '#7efff5'
-const CV_SECONDARY = '#67e6dc'
-
 const colors: Colors = {
   tuna: '#33313b',
   steel: '#7efff5',
@@ -11,18 +6,13 @@ const colors: Colors = {
 }
 
 const cv: CV = {
-  primary: {
-    pale: lighten(0.15, CV_PRIMARY),
-    light: lighten(0.05, CV_PRIMARY),
-    medium: CV_PRIMARY,
-    dark: darken(0.075, CV_PRIMARY),
-  },
-  secondary: {
-    pale: lighten(0.15, CV_SECONDARY),
-    light: lighten(0.05, CV_SECONDARY),
-    medium: CV_SECONDARY,
-    dark: darken(0.075, CV_SECONDARY),
-  },
+  '001': '#9BC5DE',
+  '002': '#90B3C9',
+  '003': '#809BB0',
+  '004': '#6B7B8A',
+  '005': '#8B8091',
+  '006': '#B68FA2',
+  '007': '#D99AB5',
 }
 
 const palette: Palette = {

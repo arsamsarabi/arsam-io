@@ -20,50 +20,80 @@ export const StyledCv = styled.section(({ theme }: TitleProps): any => {
       display: block;
       text-align: justify;
       font-family: var(--font-headings);
-
+      transition: color 2.5s ease;
       &:nth-of-type(1) {
         font-size: 124px;
-        color: ${cv.primary.pale};
+        color: ${cv['001']};
+        &:hover {
+          color: ${cv['007']};
+        }
       }
       &:nth-of-type(2) {
         font-size: 128px;
-        color: ${cv.primary.light};
+        color: ${cv['002']};
+        &:hover {
+          color: ${cv['006']};
+        }
       }
       &:nth-of-type(3) {
         font-size: 64px;
-        color: ${cv.primary.medium};
+        color: ${cv['003']};
+        &:hover {
+          color: ${cv['005']};
+        }
       }
       &:nth-of-type(4) {
         font-size: 100px;
-        color: ${cv.primary.medium};
+        color: ${cv['003']};
+        &:hover {
+          color: ${cv['005']};
+        }
       }
       &:nth-of-type(5) {
         font-size: 76px;
-        color: ${cv.primary.dark};
+        color: ${cv['004']};
       }
       &:nth-of-type(6) {
         font-size: 82px;
-        color: ${cv.secondary.dark};
+        color: ${cv['005']};
+        &:hover {
+          color: ${cv['003']};
+        }
       }
       &:nth-of-type(7) {
         font-size: 134px;
-        color: ${cv.secondary.dark};
+        color: ${cv['005']};
+        &:hover {
+          color: ${cv['003']};
+        }
       }
       &:nth-of-type(8) {
         font-size: 62px;
-        color: ${cv.secondary.medium};
+        color: ${cv['006']};
+        &:hover {
+          color: ${cv['002']};
+        }
       }
       &:nth-of-type(9) {
         font-size: 166px;
-        color: ${cv.secondary.medium};
+        color: ${cv['006']};
+        &:hover {
+          color: ${cv['002']};
+        }
       }
       &:nth-of-type(10) {
         font-size: 138px;
-        color: ${cv.secondary.light};
+        color: ${cv['007']};
+        &:hover {
+          color: ${cv['001']};
+        }
       }
       &:nth-of-type(11) {
-        font-size: 132px;
-        color: ${cv.secondary.pale};
+        font-size: 130px;
+        color: ${cv['007']};
+        &:hover {
+          color: ${cv['001']};
+        }
       }
     }
   `
