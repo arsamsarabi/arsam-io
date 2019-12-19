@@ -5,11 +5,11 @@ export const GlobalStyles = createGlobalStyle`
 
   ${resetCss}
 
-  @import url('https://fonts.googleapis.com/css?family=B612:400,700|Press+Start+2P&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=B612:400,700|BenchNine:700&display=swap');
 
   @font-face {
-    font-family: 'oasis';
-    src: url('/static/fonts/theblueoasis.woff');
+    font-family: 'beauty';
+    src: url('/static/fonts/beauty.woff');
   }
 
   #app {
@@ -27,7 +27,7 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     font-size: 18px;
     overflow: hidden;
-    color: #333333;
+    color: #f6f5f5;
   }
 
   #__next {
@@ -36,7 +36,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   :root {
-    --font-headings: 'Press Start 2P'
+    --font-headings: 'BenchNine'
   }
 `
 

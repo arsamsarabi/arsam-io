@@ -1,18 +1,39 @@
+import { lighten, darken } from 'polished'
+
+const CV_PRIMARY = '#7efff5'
+const CV_SECONDARY = '#67e6dc'
+
 const colors: Colors = {
-  mine: '#343434',
-  grey: '#8e8b82',
-  spanish: '#e9dcbe',
-  concrete: '#f3f3f3',
+  tuna: '#33313b',
+  steel: '#7efff5',
+  cashmere: '#e3c4a8',
+  sand: '#f6f5f5',
+}
+
+const cv: CV = {
+  primary: {
+    pale: lighten(0.15, CV_PRIMARY),
+    light: lighten(0.05, CV_PRIMARY),
+    medium: CV_PRIMARY,
+    dark: darken(0.075, CV_PRIMARY),
+  },
+  secondary: {
+    pale: lighten(0.15, CV_SECONDARY),
+    light: lighten(0.05, CV_SECONDARY),
+    medium: CV_SECONDARY,
+    dark: darken(0.075, CV_SECONDARY),
+  },
 }
 
 const palette: Palette = {
-  primary: colors.mine,
-  secondary: colors.grey,
-  accent: colors.spanish,
-  contrast: colors.concrete,
+  primary: colors.tuna,
+  secondary: colors.steel,
+  accent: colors.cashmere,
+  contrast: colors.sand,
 }
 
 export const theme: Theme = {
   palette,
   colors,
+  cv,
 }
