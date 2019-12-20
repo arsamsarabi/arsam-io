@@ -12,12 +12,12 @@ const PosedBubble = posed.div({
   hidden: {
     opacity: 0,
     right: ({ config }: { config: CvConfig }): string =>
-      config.side === 'right' ? '-50px' : '50px',
+      config.side === 'right' ? '-48px' : '48px',
   },
   visible: {
     opacity: 1,
     right: ({ config }: { config: CvConfig }): string =>
-      config.side === 'right' ? '-280px' : '310px',
+      config.side === 'right' ? '-252px' : '318px',
   },
 })
 
@@ -57,6 +57,7 @@ export const BubbleWrapper = styled(PosedBubble)<BubbleWrapper>(({ theme, config
     top: ${config.top};
     display: flex;
     opacity: 0;
+    z-index: 0;
     &:after {
       content: '';
       position: absolute;

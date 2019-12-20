@@ -74,4 +74,5 @@ declare type CvConfig = {
 
 declare type CvStore = {
   isOpen: boolean
+  setIsOpen(value: boolean): void
 }

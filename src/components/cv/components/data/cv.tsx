@@ -1,6 +1,6 @@
 import React from 'react'
 import { theme } from '../../../../styles/theme'
-import { About, Name, Education, Experience, Technical } from '../info'
+import { About, Blog, Name, Education, Experience, Technical } from '../info'
 
 export const arsamsCV: CvSection[] = [
   {
@@ -55,5 +55,6 @@ export const arsamsCV: CvSection[] = [
     ],
     color: theme.cv['006'],
     hoverColor: theme.cv['002'],
+    bubble: <Blog />,
   },
 ]
