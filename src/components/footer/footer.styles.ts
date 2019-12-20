@@ -15,7 +15,7 @@ export const StyledFooter = styled.footer(({ theme }: { theme: Theme }) => {
       color: ${theme.palette.secondary};
       margin-right: auto;
       font-family: 'beauty', sans-serif;
-      font-size: 28px;
+      font-size: 34px;
     }
   `
 })
@@ -23,7 +23,7 @@ export const StyledFooter = styled.footer(({ theme }: { theme: Theme }) => {
 export const SocialLink = styled.a(({ theme }: { theme: Theme }) => {
   return css`
     &:not(:last-of-type) {
-      margin-right: 8px;
+      margin-right: 12px;
     }
     &:hover {
       & > svg {
@@ -32,7 +32,7 @@ export const SocialLink = styled.a(({ theme }: { theme: Theme }) => {
     }
     & > svg {
       fill: ${theme.palette.contrast};
-      width: 20px;
+      width: 30px;
       height: auto;
       transition: 0.3s all ease-in;
     }

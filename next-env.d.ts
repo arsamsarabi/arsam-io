@@ -20,11 +20,19 @@ declare type Colors = {
   [key: string]: string
 }
 
+declare type BasicColor = {
+  light: string
+  dark: string
+}
+
 declare type Palette = {
   primary: string
   secondary: string
   accent: string
   contrast: string
+  danger: BasicColor
+  warning: BasicColor
+  success: BasicColor
 }
 
 declare type Theme = {
@@ -43,10 +51,27 @@ declare type CvSection = {
   texts: CvText[]
   color: string
   hoverColor: string
+  bubble?: React.ReactElement
+  isHovering?: boolean
 }
 
 declare type CvHeading = {
   size: number
   color: string
   hoverColor: string
+}
+
+declare type CvConfig = {
+  id: string
+  side: 'right' | 'left'
+  arrow: 'top' | 'bottom'
+  top: string
+}
+
+/**
+ * STORES
+ */
+
+declare type CvStore = {
+  isOpen: boolean
 }

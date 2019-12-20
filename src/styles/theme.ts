@@ -1,8 +1,14 @@
 const colors: Colors = {
   tuna: '#33313b',
-  steel: '#7efff5',
+  morning: '#9BC5DE',
   cashmere: '#e3c4a8',
   sand: '#f6f5f5',
+  pomegranate: '#c0392b',
+  alizarin: '#e74c3c',
+  orange: '#f39c12',
+  sun: '#f1c40f',
+  nephritis: '#27ae60',
+  emerald: '#2ecc71',
 }
 
 const cv: CV = {
@@ -17,9 +23,21 @@ const cv: CV = {
 
 const palette: Palette = {
   primary: colors.tuna,
-  secondary: colors.steel,
+  secondary: colors.morning,
   accent: colors.cashmere,
   contrast: colors.sand,
+  danger: {
+    light: colors.alizarin,
+    dark: colors.pomegranate,
+  },
+  warning: {
+    light: colors.sun,
+    dark: colors.orange,
+  },
+  success: {
+    light: colors.emerald,
+    dark: colors.nephritis,
+  },
 }
 
 export const theme: Theme = {

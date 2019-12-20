@@ -15,7 +15,7 @@ class AioDocument extends Document<{ styleTags: any }> {
             rel="preload"
             as="font"
             type="font/woff2"
-            href="/static/fonts/b612-v4-latin-700.woff2"
+            href="/static/fonts/noto-sans-v9-latin-700.woff2"
             crossOrigin="anonymous"
           />
 
@@ -23,7 +23,7 @@ class AioDocument extends Document<{ styleTags: any }> {
             rel="preload"
             as="font"
             type="font/woff2"
-            href="/static/fonts/b612-v4-latin-regular.woff2"
+            href="/static/fonts/noto-sans-v9-latin-regular.woff2"
             crossOrigin="anonymous"
           />
 
@@ -42,6 +42,8 @@ class AioDocument extends Document<{ styleTags: any }> {
             href="/static/fonts/benchnine-v8-latin-regular.woff2"
             crossOrigin="anonymous"
           />
+
+          <link rel="icon" type="image/x-icon" href="/static/images/favicon.png" />
 
           {this.props.styleTags}
         </Head>

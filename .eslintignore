@@ -5,5 +5,4 @@ prettier.config.js
 next.config.js
 *.md
 *.jpg
-cosmos/webpack.config.js
 postcss.config.js

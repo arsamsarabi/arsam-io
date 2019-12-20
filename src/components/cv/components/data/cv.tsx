@@ -1,17 +1,24 @@
-import { theme } from '../../../styles/theme'
+import React from 'react'
+import { theme } from '../../../../styles/theme'
+import { About, Name, Education, Experience, Technical } from '../info'
 
 export const arsamsCV: CvSection[] = [
   {
     id: 'name',
-    texts: [{ text: 'Arsam', size: 124 }],
+    texts: [
+      { text: 'Arsam', size: 124 },
+      { text: 'Sarabi', size: 118 },
+    ],
     color: theme.cv['001'],
     hoverColor: theme.cv['005'],
+    bubble: <Name />,
   },
   {
     id: 'about',
     texts: [{ text: 'About', size: 128 }],
     color: theme.cv['002'],
     hoverColor: theme.cv['006'],
+    bubble: <About />,
   },
   {
     id: 'experience',
@@ -21,12 +28,14 @@ export const arsamsCV: CvSection[] = [
     ],
     color: theme.cv['003'],
     hoverColor: theme.cv['005'],
+    bubble: <Experience />,
   },
   {
     id: 'education',
     texts: [{ text: 'Education', size: 76 }],
     color: theme.cv['004'],
     hoverColor: theme.cv['004'],
+    bubble: <Education />,
   },
   {
     id: 'technical',
@@ -36,6 +45,7 @@ export const arsamsCV: CvSection[] = [
     ],
     color: theme.cv['005'],
     hoverColor: theme.cv['003'],
+    bubble: <Technical />,
   },
   {
     id: 'blog',
@@ -45,14 +55,5 @@ export const arsamsCV: CvSection[] = [
     ],
     color: theme.cv['006'],
     hoverColor: theme.cv['002'],
-  },
-  {
-    id: 'contact',
-    texts: [
-      { text: 'Get in', size: 138 },
-      { text: 'Touch', size: 130 },
-    ],
-    color: theme.cv['007'],
-    hoverColor: theme.cv['001'],
   },
 ]
