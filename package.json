@@ -25,18 +25,27 @@
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
   },
   "dependencies": {
+    "mobx": "^5.15.1",
+    "mobx-react": "^6.1.4",
     "next": "^9.1.6",
     "next-fonts": "^0.19.0",
     "polished": "^3.4.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-markdown": "^4.2.2",
+    "react-pose": "^4.0.10",
+    "react-use-hover": "^1.0.0",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
     "@alineaos/eslint-config-alinea": "^1.0.3",
     "@alineaos/prettier-config-alinea": "^1.1.0",
     "@alineaos/stylelint-config-alinea": "^1.0.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-decorators": "^7.7.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.7.7",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "@babel/plugin-transform-runtime": "^7.7.6",
     "@next/bundle-analyzer": "^9.1.6",
     "@svgr/webpack": "^4.3.3",
     "@types/node": "^12.12.21",

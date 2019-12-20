@@ -52,6 +52,7 @@ declare type CvSection = {
   color: string
   hoverColor: string
   bubble?: React.ReactElement
+  isHovering?: boolean
 }
 
 declare type CvHeading = {
@@ -65,4 +66,12 @@ declare type CvConfig = {
   side: 'right' | 'left'
   arrow: 'top' | 'bottom'
   top: string
+}
+
+/**
+ * STORES
+ */
+
+declare type CvStore = {
+  isOpen: boolean
 }
