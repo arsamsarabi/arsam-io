@@ -7,9 +7,10 @@ const Wrapper = styled.div`
   position: absolute;
   padding: 16px 64px;
   transform: rotateZ(45deg);
-  right: -80px;
-  top: 50px;
+  right: -72px;
+  top: 36px;
   h1 {
+    font-size: 12px;
     opacity: 0.5;
   }
 `

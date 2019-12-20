@@ -18,7 +18,6 @@ export const Bubble = ({ id, children }: Bubble): ReactElement => {
   if (!_config) {
     return null
   }
-  console.log(_config)
   return <BubbleWrapper config={_config}>{children}</BubbleWrapper>
 }
 
