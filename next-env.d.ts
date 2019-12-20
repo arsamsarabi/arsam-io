@@ -55,8 +55,6 @@ declare type CvHeading = {
 declare type CvConfig = {
   id: string
   side: 'right' | 'left'
-  position: {
-    top: string
-    left: string
-  }
+  arrow: 'top' | 'bottom'
+  top: string
 }
