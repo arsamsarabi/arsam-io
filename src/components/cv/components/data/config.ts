@@ -2,31 +2,31 @@ export const config: CvConfig[] = [
   {
     id: 'name',
     side: 'left',
-    top: '-50px',
+    top: '-30px',
     arrow: 'bottom',
   },
   {
     id: 'about',
     side: 'right',
-    top: '-212px',
+    top: '-165px',
     arrow: 'bottom',
   },
   {
     id: 'experience',
     side: 'left',
-    top: '-150px',
+    top: '-130px',
     arrow: 'bottom',
   },
   {
     id: 'education',
     side: 'right',
-    top: '-80px',
+    top: '-65px',
     arrow: 'bottom',
   },
   {
     id: 'technical',
     side: 'left',
-    top: '20px',
+    top: '50px',
     arrow: 'top',
   },
 ]

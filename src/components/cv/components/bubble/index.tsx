@@ -57,8 +57,6 @@ export const BubbleWrapper = styled.span<BubbleWrapper>(({ theme, config }) => {
     left: ${config.side === 'left' ? '-280px' : '310px'};
     top: ${config.top};
     display: flex;
-    justify-content: center;
-    align-items: center;
     &:after {
       content: '';
       position: absolute;
@@ -72,13 +70,16 @@ export const BubbleWrapper = styled.span<BubbleWrapper>(({ theme, config }) => {
     & > div {
       flex: 1;
       z-index: 10;
-      padding: 16px;
-      font-size: 18px;
+      padding: 18px;
       min-height: 75px;
       background-color: ${rgba(theme.palette.primary, 0.99)};
       color: ${darken(0.035, theme.palette.contrast)};
       border: 4px solid ${darken(0.075, theme.palette.primary)};
       border-radius: 3px 10px 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
     }
   `
 })

@@ -1,6 +1,6 @@
 const colors: Colors = {
   tuna: '#33313b',
-  steel: '#7efff5',
+  morning: '#9BC5DE',
   cashmere: '#e3c4a8',
   sand: '#f6f5f5',
   pomegranate: '#c0392b',
@@ -23,7 +23,7 @@ const cv: CV = {
 
 const palette: Palette = {
   primary: colors.tuna,
-  secondary: colors.steel,
+  secondary: colors.morning,
   accent: colors.cashmere,
   contrast: colors.sand,
   danger: {

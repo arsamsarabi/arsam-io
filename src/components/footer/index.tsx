@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
 import Link from 'next/link'
 import { StyledFooter, SocialLink } from './footer.styles'
-import { DevTo, Github, LinkedIn } from './icons'
+import { DevTo, Github, LinkedIn } from '../../styles/icons'
 
 export const Footer = (): ReactElement => (
   <StyledFooter>
