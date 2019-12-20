@@ -13,7 +13,7 @@ const Wrapper = styled.div`
       margin-bottom: 8px;
     }
     span {
-      color: ${({ theme }): string => theme.palette.secondary};
+      color: ${({ theme }): string => theme.palette.accent};
       display: block;
       font-size: 12px;
       font-weight: 700;

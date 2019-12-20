@@ -29,4 +29,10 @@ export const config: CvConfig[] = [
     top: '50px',
     arrow: 'top',
   },
+  {
+    id: 'blog',
+    side: 'right',
+    top: '50px',
+    arrow: 'top',
+  },
 ]

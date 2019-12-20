@@ -13,6 +13,7 @@ export const CvHeading = styled.p<CvHeading>(({ size, color, hoverColor }) => {
     user-select: none;
     font-size: ${size}px;
     color: ${color};
+    z-index: 1;
     &:hover {
       color: ${hoverColor};
     }
