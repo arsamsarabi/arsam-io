@@ -1,6 +1,7 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useEffect } from 'react'
 import styled from 'styled-components'
 import useHover from 'react-use-hover'
+import { useStores } from '../../stores'
 import { CvSection } from './components/cvSection'
 import { arsamsCV } from './components/data/cv'
 
@@ -12,6 +13,12 @@ const StyledCv = styled.section`
 
 export const Cv = (): ReactElement => {
   const [isHovering, hoverProps] = useHover()
+  const { CvStore } = useStores()
+  useEffect((): void => {
+    if (isHovering) {
+      CvStore.setIsOpen(isHovering)
+    }
+  })
   return (
     <StyledCv {...hoverProps}>
       {arsamsCV.map(({ id, texts, color, hoverColor, bubble }: CvSection) => {

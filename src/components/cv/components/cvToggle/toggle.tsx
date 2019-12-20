@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react'
 import styled, { css } from 'styled-components'
-import { rgba } from 'polished'
 
 const ToggleWrapper = styled.div`
   position: absolute;
@@ -8,23 +7,44 @@ const ToggleWrapper = styled.div`
   left: 10px;
 `
 
-const Label = styled.label`
-  position: relative;
-  display: inline-block;
-  width: 45px;
-  height: 20px;
-`
+const Label = styled.label(({ theme }: { theme: Theme }) => {
+  return css`
+    position: relative;
+    display: block;
+    width: 42px;
+    height: 24px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+    &:before {
+      content: '';
+      position: relative;
+      top: 1px;
+      left: 1px;
+      width: 40px;
+      height: 22px;
+      display: block;
+      background: ${theme.cv['005']};
+      border-radius: 12px;
+      transition: background 0.2s ease;
+    }
+  `
+})
 
 const Input = styled.input(({ theme }: { theme: Theme }) => {
   return css`
-    opacity: 0;
-    width: 0;
-    height: 0;
-    &:checked + span {
-      background-color: ${rgba(theme.cv['001'], 0.2)};
+    display: none;
+    &:checked + label {
       &:before {
-        transform: translateX(26px);
-        background-color: ${theme.cv['001']};
+        background: ${theme.cv['001']};
+      }
+      & > span {
+        transform: translateX(18px);
+        & > svg > path {
+          stroke: ${theme.cv['001']};
+          stroke-dasharray: 25;
+          stroke-dashoffset: 25;
+        }
       }
     }
   `
@@ -33,24 +53,26 @@ const Input = styled.input(({ theme }: { theme: Theme }) => {
 const Indicator = styled.span(({ theme }: { theme: Theme }) => {
   return css`
     position: absolute;
-    cursor: pointer;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: ${theme.palette.primary};
-    transition: 0.4s;
-    border-radius: 34px;
-    &:before {
-      position: absolute;
-      content: '';
-      height: 15px;
-      width: 15px;
-      left: 2px;
-      bottom: 3px;
-      background-color: ${rgba(theme.cv['007'], 0.4)};
-      transition: 0.4s;
-      border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: block;
+    background: ${theme.palette.primary};
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    & > svg {
+      margin: 7px;
+      fill: none;
+      & > path {
+        stroke: ${theme.cv['005']};
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 24;
+        stroke-dashoffset: 0;
+        transition: all 0.5s linear;
+      }
     }
   `
 })
@@ -63,9 +85,13 @@ export type ToggleProps = {
 export const Toggle = ({ onClick, checked }: ToggleProps): ReactElement => {
   return (
     <ToggleWrapper>
-      <Label>
-        <Input type="checkbox" checked={checked} onChange={onClick} />
-        <Indicator />
+      <Input type="checkbox" checked={checked} onChange={onClick} id="toggleInput" />
+      <Label htmlFor="toggleInput">
+        <Indicator>
+          <svg width="10px" height="10px" viewBox="0 0 10 10">
+            <path d="M5,1 L5,1 C2.790861,1 1,2.790861 1,5 L1,5 C1,7.209139 2.790861,9 5,9 L5,9 C7.209139,9 9,7.209139 9,5 L9,5 C9,2.790861 7.209139,1 5,1 L5,9 L5,1 Z"></path>
+          </svg>
+        </Indicator>
       </Label>
     </ToggleWrapper>
   )
