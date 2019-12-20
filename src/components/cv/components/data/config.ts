@@ -8,7 +8,7 @@ export const config: CvConfig[] = [
   {
     id: 'about',
     side: 'right',
-    top: '-172px',
+    top: '-212px',
     arrow: 'bottom',
   },
   {
