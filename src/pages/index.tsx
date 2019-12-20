@@ -1,22 +1,13 @@
 import React, { ReactElement } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { Layout, Cv } from '../components'
 
-const StyledApp = styled.main(({ theme }: { theme: Theme }) => {
-  return css`
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    h1 {
-      font-family: var(--font-headings);
-      font-size: 64px;
-      line-height: 1.8;
-      color: ${theme.palette.accent};
-      max-width: 1024px;
-    }
-  `
-})
+const StyledApp = styled.section`
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
 const App = (): ReactElement => {
   return (

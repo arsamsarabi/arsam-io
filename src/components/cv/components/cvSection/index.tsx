@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react'
 import styled from 'styled-components'
+import { Bubble } from '../bubble'
 import { CvHeading } from '../cvHeading'
 
 const StyledSection = styled.section`
@@ -7,7 +8,7 @@ const StyledSection = styled.section`
   /* border: 1px solid gold; */
 `
 
-export const CvSection = ({ texts, color, hoverColor }: CvSection): ReactElement => {
+export const CvSection = ({ texts, color, hoverColor, bubble, id }: CvSection): ReactElement => {
   return (
     <StyledSection>
       {texts.map(
@@ -19,6 +20,7 @@ export const CvSection = ({ texts, color, hoverColor }: CvSection): ReactElement
           )
         },
       )}
+      {bubble ? <Bubble id={id}>{bubble}</Bubble> : ''}
     </StyledSection>
   )
 }

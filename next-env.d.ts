@@ -43,10 +43,20 @@ declare type CvSection = {
   texts: CvText[]
   color: string
   hoverColor: string
+  bubble?: React.ReactElement
 }
 
 declare type CvHeading = {
   size: number
   color: string
   hoverColor: string
+}
+
+declare type CvConfig = {
+  id: string
+  side: 'right' | 'left'
+  position: {
+    top: string
+    left: string
+  }
 }
