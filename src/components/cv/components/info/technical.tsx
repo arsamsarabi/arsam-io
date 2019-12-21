@@ -7,16 +7,19 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   justify-content: space-around !important;
   padding-bottom: 12px !important;
-  & > i {
-    width: 30px;
-    height: auto;
-    margin-right: 8px;
-  }
   & > a {
     &:nth-last-of-type(1),
     &:nth-last-of-type(2),
-    &:nth-last-of-type(3) {
+    &:nth-last-of-type(3),
+    &:nth-last-of-type(4) {
       margin-bottom: 0;
+    }
+    &:nth-of-type(4),
+    &:nth-of-type(8),
+    &:nth-of-type(12),
+    &:nth-of-type(16),
+    &:nth-of-type(20) {
+      margin-right: 0;
     }
   }
 `
@@ -34,7 +37,7 @@ export const Technical = (): ReactElement => {
         link="https://www.typescriptlang.org/"
         color="#0077c6"
       />
-      <TechIconLink icon={<Icons.Python />} link="https://www.python.org/" color="#646464" />
+      <TechIconLink icon={<Icons.Python />} link="https://www.python.org/" color="#ffde57" />
       <TechIconLink
         icon={<Icons.Java />}
         link="https://en.wikipedia.org/wiki/Java_(programming_language)"
@@ -60,12 +63,10 @@ export const Technical = (): ReactElement => {
       <TechIconLink icon={<Icons.Jest />} link="https://jestjs.io/" color="#954059" />
       <TechIconLink icon={<Icons.MongoDB />} link="" color="#51af3f" />
       <TechIconLink icon={<Icons.Docker />} link="https://www.mongodb.com/" color="#0897e5" />
-      <TechIconLink icon={<Icons.Webpack />} link="https://webpack.js.org/" color="#1d75bb" />
       <TechIconLink icon={<Icons.CircleCI />} link="https://circleci.com/" color="#555555" />
+      <TechIconLink icon={<Icons.Github />} link="https://github.com/arsamsarabi" color="#555555" />
       <TechIconLink icon={<Icons.Git />} link="https://git-scm.com/" color="#e94e31" />
-
-      <i aria-hidden="true" />
-      <i aria-hidden="true" />
+      <TechIconLink icon={<Icons.Webpack />} link="https://webpack.js.org/" color="#1d75bb" />
     </Wrapper>
   )
 }
