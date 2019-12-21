@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react'
 import styled, { css } from 'styled-components'
+import { rgba } from 'polished'
 
 export const Wrapper = styled.a(({ theme, color }: { theme: Theme; color: string }) => {
   return css`
@@ -14,7 +15,7 @@ export const Wrapper = styled.a(({ theme, color }: { theme: Theme; color: string
       }
     }
     & > svg {
-      fill: ${theme.palette.contrast};
+      fill: ${rgba(theme.palette.contrast, 0.8)};
       width: 30px;
       height: auto;
       transition: 0.3s all ease-in;
