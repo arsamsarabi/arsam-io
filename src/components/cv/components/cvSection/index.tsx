@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react'
 import styled from 'styled-components'
+import Link from 'next/link'
 import { Bubble } from '../bubble'
 import { CvHeading } from '../cvHeading'
 
@@ -19,11 +20,25 @@ export const CvSection = ({
     <StyledSection>
       {texts.map(
         (text: CvText): ReactElement => {
-          return (
-            <CvHeading color={color} hoverColor={hoverColor} size={text.size} key={text.text}>
+          const el = (
+            <CvHeading
+              color={color}
+              hoverColor={hoverColor}
+              size={text.size}
+              key={text.text}
+              id={id}
+            >
               {text.text}
             </CvHeading>
           )
+          if (id === 'blog') {
+            return (
+              <Link href="/blog" key={text.text}>
+                {el}
+              </Link>
+            )
+          }
+          return el
         },
       )}
       {bubble ? (

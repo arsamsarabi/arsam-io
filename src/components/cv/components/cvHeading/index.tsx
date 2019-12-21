@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export const CvHeading = styled.p<CvHeading>(({ size, color, hoverColor }) => {
+export const CvHeading = styled.p<CvHeading>(({ size, color, hoverColor, id }) => {
   return css`
     line-height: 0.8;
     text-transform: uppercase;
@@ -13,6 +13,7 @@ export const CvHeading = styled.p<CvHeading>(({ size, color, hoverColor }) => {
     user-select: none;
     font-size: ${size}px;
     color: ${color};
+    cursor: ${id === 'blog' ? 'pointer' : 'default'};
     z-index: 1;
     &:hover {
       color: ${hoverColor};
