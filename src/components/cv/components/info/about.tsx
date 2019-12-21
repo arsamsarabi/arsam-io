@@ -7,7 +7,7 @@ export const About = (): ReactElement => {
   return (
     <Wrapper>
       <p>
-        I am a Senior Full-Stack Enginner, Product Maker and lifelong learner. I make new Products
+        I am a Senior Full-Stack Engineer, Product Maker and lifelong learner. I make new Products
         from scratch and make ideas happen!
       </p>
     </Wrapper>

@@ -1,15 +1,10 @@
 import React, { ReactElement, useEffect } from 'react'
-import styled from 'styled-components'
 import useHover from 'react-use-hover'
 import { useStores } from '../../stores'
 import { CvSection } from './components/cvSection'
 import { arsamsCV } from './components/data/cv'
-
-const StyledCv = styled.section`
-  width: 270px;
-  margin: 50px auto;
-  position: Relative;
-`
+import { Console } from '../console'
+import { StyledCv, ConsoleWrapper } from './cv.styles'
 
 export const Cv = (): ReactElement => {
   const [isHovering, hoverProps] = useHover()
@@ -34,6 +29,10 @@ export const Cv = (): ReactElement => {
           />
         )
       })}
+      <ConsoleWrapper>
+        <h2>Have you tried:</h2>
+        <Console />
+      </ConsoleWrapper>
     </StyledCv>
   )
 }
