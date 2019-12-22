@@ -1,18 +1,21 @@
 import matter from 'gray-matter'
 import React, { ReactElement } from 'react'
-import { BlogHeader } from './components/blogHeader'
-import { BlogPost } from './components/blogPost'
-import { Layout } from './components/blogLayout'
+import { BlogHeader } from '../../components/blog/blogHeader'
+import { BlogPost } from '../../components/blog/blogPost'
+import { Layout } from '../../components/blog/blogLayout'
+import { BlogBody } from '../../components/blog/blogBody'
 
 const Blog = ({ allBlogs }): ReactElement => {
   return (
     <Layout>
       <BlogHeader />
-      {allBlogs.map(
-        (post: Post): ReactElement => (
-          <BlogPost post={post} key={post.slug} />
-        ),
-      )}
+      <BlogBody>
+        {allBlogs.map(
+          (post: Post): ReactElement => (
+            <BlogPost post={post} key={post.slug} />
+          ),
+        )}
+      </BlogBody>
     </Layout>
   )
 }

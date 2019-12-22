@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { theme } from '../../../../styles/theme'
-import { GlobalStyles } from '../../../../styles/global'
-import Footer from '../../../../components/footer'
+import { theme } from '../../../styles/theme'
+import { GlobalStyles } from '../../../styles/global'
+import Footer from '../../footer'
 import { StyledLayout, Content } from './layout.styles'
 
 export const Layout = ({ children }): ReactElement => {

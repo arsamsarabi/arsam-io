@@ -1,5 +1,6 @@
 const colors: Colors = {
   black: '#000000',
+  white: '#FFFFFF',
   tuna: '#33313b',
   morning: '#9BC5DE',
   cancan: '#D99AB5',

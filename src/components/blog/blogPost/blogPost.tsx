@@ -4,7 +4,7 @@ import { rgba } from 'polished'
 export const BlogPost = styled.section(({ theme }) => {
   return css`
     margin-bottom: 32px;
-    background-color: ${rgba(theme.cv['006'], 0.05)};
+    background-color: ${theme.palette.contrast};
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 0 3px 0 ${rgba(theme.colors.black, 0.5)};
@@ -35,7 +35,8 @@ export const Hero = styled.div<HeroInterface>(({ theme, image, bgPos }) => {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      background-color: ${rgba(theme.colors.black, 0.75)};
+      background-color: ${rgba(theme.palette.primary, 0.85)};
+      color: ${rgba(theme.palette.contrast, 1)};
 
       h1 {
         font-family: var(--font-headings);
@@ -45,11 +46,15 @@ export const Hero = styled.div<HeroInterface>(({ theme, image, bgPos }) => {
       & > span {
         display: flex;
         justify-content: space-between;
+        font-size: 14px;
       }
     }
   `
 })
 
-export const Content = styled.div`
-  padding: 32px;
-`
+export const Content = styled.div(
+  ({ theme }) => css`
+    padding: 32px;
+    color: ${theme.palette.primary};
+  `,
+)
