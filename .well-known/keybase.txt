@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/arsam
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://arsam.dev
+  * I am arsam (https://keybase.io/arsam) on keybase.
+  * I have a public key ASD53B2w0Y5CkI-ew5Qfc_TBgB5DpkiXUhYutk1ME3Bk8go
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120811a3cb55fb1b52c0f6b798fc7769a5d701849b7f26889a3a9003bce4bc14f600a",
+      "host": "keybase.io",
+      "kid": "0120f9dc1db0d18e42908f9ec3941f73f4c1801e43a6489752162eb64d4c137064f20a",
+      "uid": "ab8e0c7f193a6df72b6bd578ccc0b119",
+      "username": "arsam"
+    },
+    "merkle_root": {
+      "ctime": 1589009845,
+      "hash": "0a7c8a062ea863a2783b32484ed663f07fc8df33730eea0b60b5f5057634e002cacdee4323a7c11344a20e2fbf594288882b74b593a47a2e89953847b5ada487",
+      "hash_meta": "9657c11659bc9229c11b85d25dcdb126d8aa2e49109ad7403898347b5739c75d",
+      "seqno": 16227515
+    },
+    "service": {
+      "entropy": "aDXyHjveZSg/+stPTNpC0naA",
+      "hostname": "arsam.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.4.2"
+  },
+  "ctime": 1589009864,
+  "expire_in": 504576000,
+  "prev": "a8991275fef56d666263fd872cc469f57db7d6642e06d9f820a478245addfaad",
+  "seqno": 14,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg+dwdsNGOQpCPnsOUH3P0wYAeQ6ZIl1IWLrZNTBNwZPIKp3BheWxvYWTESpcCDsQgqJkSdf71bWZiY/2HLMRp9X231mQuBtn4IKR4JFrd+q3EIMfp2ktPcacssEXZhajAtugwTtszuI/vZCcxaWOt0u9tAgHCo3NpZ8RAOwliV2nSLqb5atIUGuEx1GuXvxlxUloFIjX9ldjNIeKVjfbyluJmmQA+1HXDdFPB469LK9SA+YAB5ZtiV2mAC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIF6TkkLOdldCt/xZOH6zBXT48cx0NjXL/eJ20JuQSxcVo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/arsam
+
+==================================================================

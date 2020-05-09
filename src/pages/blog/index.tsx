@@ -1,12 +1,21 @@
 import matter from 'gray-matter'
 import React, { ReactElement } from 'react'
-import Layout from '../../components/layout'
+import { BlogHeader } from '../../components/blog/blogHeader'
+import { BlogPost } from '../../components/blog/blogPost'
+import { Layout } from '../../components/blog/blogLayout'
+import { BlogBody } from '../../components/blog/blogBody'
 
-const Blog = (props): ReactElement => {
-  console.log(props)
+const Blog = ({ allBlogs }): ReactElement => {
   return (
     <Layout>
-      <h1>Arsam</h1>
+      <BlogHeader />
+      <BlogBody>
+        {allBlogs.map(
+          (post: Post): ReactElement => (
+            <BlogPost post={post} key={post.slug} />
+          ),
+        )}
+      </BlogBody>
     </Layout>
   )
 }

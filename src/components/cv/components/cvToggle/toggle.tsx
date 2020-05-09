@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import styled, { css } from 'styled-components'
 
 const ToggleWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   top: 10px;
   left: 10px;
 `

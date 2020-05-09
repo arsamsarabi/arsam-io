@@ -76,3 +76,24 @@ declare type CvStore = {
   isOpen: boolean
   setIsOpen(value: boolean): void
 }
+
+/**
+ * BLOG
+ */
+declare type PostData = {
+  title: string
+  author: string
+  date: string
+  hero_image: string
+  bgPos: string
+}
+
+declare type PostDocument = {
+  content: string
+  data: PostData
+}
+
+declare type Post = {
+  slug: string
+  document: PostDocument
+}
